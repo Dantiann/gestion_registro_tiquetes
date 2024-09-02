@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <br />
+    <section class="jumbotron" aria-labelledby="aspnetTitle">
+        <h1 id="title">Transporte Terrestre Serro</h1>
+        <p class="lead">Especilizados en el transporte de pasajeros </p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+    </section>
+
+    @model Mvctransporteterrestre.Models.Tiquetes
+
+    <div class="row">
+
+        <section class="col-md-3" aria-labelledby="librariesTitle">
+
+            <h2 id="librariesTitle"><strong> Compra de Tiquete </strong></h2>
+            <form action="/Home/Index" method="post">
+                <br /><br />
+                <input type="text" id="idTiquete" name="idTiquete" placeholder="Tiquete No" /><br /><br />
+                <input type="text" id="origen" name="origen" placeholder="Origen" /><br /><br />
+                <input type="text" id="destino" name="destino" placeholder="Destino" /><br /><br />
+                <input type="text" id="fecha" name="fecha" placeholder="Fecha" /><br /><br />
+                <input type="text" id="cantidad" name="cantidad" placeholder="cantidad" /><br /><br />
+                <input type="text" id="precio" name="precio" placeholder="Precio" /><br /><br />
+                <input type="submit" id="boton" name="boton" /><br /><br />
+                <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            </form>
+        </section>
+
+        <section class="col-md-6" aria-labelledby="gettingStartedTitle">
+
+            <h2 id="gettingStartedTitle"><strong>Datos del Tiquete</strong></h2> <br />
+            <p>
+                <table class="table">
+                    <tr>
+                        <th>Tiquete No.</th>
+                        <th>Origen.</th>
+                        <th>Destino.</th>
+                        <th>Fecha.</th>
+                        <th>Precio.</th>
+                        <th>Cantidad.</th>
+                        <th>Subtotal.</th>
+                    </tr>
+
+                    @if (Model != null)
+                    {
+                        <tr>
+                            <th>@Model.IdTiquete</th>
+                            <th>@Model.Origen</th>
+                            <th>@Model.Destino</th>
+                            <th>@Model.Fecha</th>
+                            <th>@Model.Precio</th>
+                            <th>@Model.Cantidad</th>
+                            <th>@Model.Subtotal</th>
+                        </tr>
+                    }
+                </table>
+            </p>
+            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </section>
+
+        <section class="col-md-3" aria-labelledby="hostingTitle">
+
+            <h2 id="hostingTitle"><strong>Web Hosting</strong></h2> <br /><br />
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </section>
+    </div>
+</main>
