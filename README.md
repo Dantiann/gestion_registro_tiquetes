@@ -1,4 +1,4 @@
-# gestion_registro_tiquetes
+# gestion_registro_tiquetes_terrestres
 WebSite creada con C# usando ASP.NET mvc y SQL Server. 
 - Este proyecto es una aplicación web desarrollada en ASP.NET MVC que permite gestionar la compra de tiquetes de transporte terrestre.
 - El registro de los datos se hace mediante un formulario el cual muestra la información del tiquete en la vista index.
